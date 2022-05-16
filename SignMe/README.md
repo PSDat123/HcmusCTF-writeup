@@ -7,11 +7,11 @@ Tham số k được generate trong Elgamal Signing Scheme ở thử thách này
 
 Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b'03'*32`, từ pt k trên ta thấy k<sub>2</sub>=3*k<sub>1</sub>, đồng thời có được signature của `msg1` và `msg2` nhờ vào signing oracle. Ngoài ra cần lưu ý k<sub>1</sub> phải coprime với phi, k<sub>2</sub> = (số lẻ) * k<sub>1</sub> nếu không cách thức này sẽ thất bại (50% số lần chạy sẽ được, 50% sẽ không)
 
-Thu được pt1 : 
+Thu được pt1 trong ring `p-1`: 
 
 s<sub>1</sub> * k<sub>1</sub> = H(msg<sub>1</sub>) - x * r<sub>1</sub>
 
-pt2:
+pt2 trong ring `p-1`:
   
 s<sub>2</sub> * 3k<sub>1</sub> = H(msg<sub>2</sub>) - x * r<sub>2</sub>
 
