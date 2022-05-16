@@ -5,6 +5,14 @@ Tham số k được generate trong Elgamal Signing Scheme ở thử thách này
 <img src="https://render.githubusercontent.com/render/math?math={\color{white}k = \sum_{n=1} ^{\infty} a_i b_i, k%2b=1,   \text{if phi | k }}#gh-dark-mode-only">
 .Trong đó a là só random do server generate và b là user base64 decoded input. 
 
-Từ đây ta có thể exploit bằng cách giải hệ pt khi cho `msg1 = b'01'*32` và `msg2 = b'03'*32`, từ pt k trên ta thấy k<sub>2</sub>=3*k<sub>1</sub>
+Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b'03'*32`, từ pt k trên ta thấy k<sub>2</sub>=3*k<sub>1</sub>
+
+Thu được pt1 : 
+
+s<sub>1<sub>*k = H(msg<sub>1</sub>) - x*r<sub>1</sub>
+
+pt2:
+  
+s<sub>2<sub>*k = H(msg<sub>2</sub>) - x*r<sub>2</sub>
 
 FLAG: `HCMUS-CTF{B4se64_15_1nt3r3stin9}`
