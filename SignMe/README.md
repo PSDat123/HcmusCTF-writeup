@@ -28,6 +28,14 @@ if k % 2 ==0:
 x = ZZ(x)
 ```
 
+Có được x ta tạo được chữ ký cho msg được server gửi về bằng cách cho `r=g`-> `k=1` rồi tính `s`:
+```sage
+h3 = bytes_to_long(sha256(m3).digest())
+r2 = g
+s3 = (h3 - x*r2) % (p-1)
+print(b64encode(long_to_bytes(r1)))
+print(b64encode(long_to_bytes(s3)))
+```
 
 
 FLAG: `HCMUS-CTF{B4se64_15_1nt3r3stin9}`
