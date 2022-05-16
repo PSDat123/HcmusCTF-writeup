@@ -18,14 +18,14 @@ s<sub>2</sub> * 3k<sub>1</sub> = H(msg<sub>2</sub>) - x * r<sub>2</sub>
 Ta giải hệ pt để tìm được secret key (x) theo cách lập ma trân bằng sage:
 
 ```sage
-    Z = Zmod(p-1)
-    A = matrix(Z, 2, [[s1, r1],[3*s2,r2]]) 
-    y = vector(Z, 2, [h1,h2])
-    k,x = A.solve_right(y)
-    k = ZZ(k)
-    if k % 2 ==0:
-        print("fail")
-    x = ZZ(x)
+Z = Zmod(p-1)
+A = matrix(Z, 2, [[s1, r1],[3*s2,r2]]) 
+y = vector(Z, 2, [h1,h2])
+k,x = A.solve_right(y)
+k = ZZ(k)
+if k % 2 ==0:
+  print("fail")
+x = ZZ(x)
 ```
 
 
