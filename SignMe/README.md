@@ -4,7 +4,7 @@ Tham số k được generate trong Elgamal Signing Scheme ở thử thách này
 <img src="https://render.githubusercontent.com/render/math?math={k = \sum_{n=1} ^{\infty} a_i b_i}#gh-light-mode-only">
 <img src="https://render.githubusercontent.com/render/math?math={\color{white}k = \sum_{n=1} ^{\infty} a_i b_i}#gh-dark-mode-only">
 
-,`k+=1` nếu không coprime với phi của p. Trong đó a là só random do server generate và b là user base64 decoded input. 
+,k+=1 nếu không coprime với phi của p. Trong đó a là só random do server generate và b là user base64 decoded input. 
 
 Từ đây ta có thể exploit bằng cách giải hệ pt khi cho `msg1 = b'01'` 
 
