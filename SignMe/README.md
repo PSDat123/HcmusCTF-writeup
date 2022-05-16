@@ -24,8 +24,11 @@ y = vector(Z, 2, [h1,h2])
 k,x = A.solve_right(y)
 k = ZZ(k)
 if k % 2 ==0:
+  #check
   print("fail")
 x = ZZ(x)
+#check lại
+print(pow(g,h1,p)==(pow(pow(g,x,p),r1,p)*pow(r1,s1,p))%p)
 ```
 
 Có được x ta tạo được chữ ký cho msg được server gửi về bằng cách cho `r=g`-> `k=1` rồi tính `s`:
