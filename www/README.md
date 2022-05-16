@@ -2,20 +2,19 @@
 
 Có thể dùng lỗi format string tại `printf(name)`. Độ dài nhập vào là 26 chỉ đủ ghi đè 1 địa chỉ nên phải tìm cách lặp main để ghi được nhiều hơn.
 
--> Ghi đè putchar.got thành main, sau đó chọn bất kỳ lựa chọn nào ngoài ariana() đều có thể quay về main
+-> Ghi đè putchar.got thành main, sau đó chọn lựa chọn nào mà gọi putchar được để về main
 
 Tiếp theo mở GDB lên xem có leak được địa chỉ nào hữu dụng không
 
 ![](https://i.imgur.com/E5TnYlF.png)
 
-Nhận thấy arg 1 của `printf` là địa chỉ của stdin(`_IO_2_1_stdin_`) (format string x64 -> [đây](https://nixhacker.com/case-of-format-string-in-64-bit-is-it-still-critical/#:~:text=Linux%3A%20RDI%2C%20RSI%2C%20RDX%2C%20RCX%2C%20R8%2C%20%C2%A0R9%2C%20remaining%20from%20the%20stack)) 
-
+Nhận thấy param 1 của `printf` là địa chỉ của stdin(`_IO_2_1_stdin_`) (calling convention của các hàm dùng format string trong x64 -> [đây](https://nixhacker.com/case-of-format-string-in-64-bit-is-it-still-critical/#:~:text=Linux%3A%20RDI%2C%20RSI%2C%20RDX%2C%20RCX%2C%20R8%2C%20%C2%A0R9%2C%20remaining%20from%20the%20stack)) 
 
 -> Tìm đúng version libc (`strings chall | grep GCC` để lấy phiên bản ubuntu rồi lấy libc trên container về) là leak được libc base 
 
 Cuối cùng gọi `system('/bin/sh')` bằng cách:
 
-- Overwrite printf.got thành địa chỉ system, chỉ cần ghi đè 2 byte vì `printf` và `system` có cùng LSB (byte đầu) (rất may vì nếu phải ghi 3 byte thì phải ghi 2 lần, vượt quá 26 ký tự) 
+- Overwrite printf.got thành system, chỉ cần ghi đè 2 byte vì `printf` và `system` có cùng LSB (byte đầu) (rất may vì nếu phải ghi 3 byte thì vượt quá 26 ký tự mà ghi 2 lần thì không được) 
 - Tại `fgets` nhập '/bin/sh', `printf(name)` trở thành thành `system('/bin/sh')`
 
 ### script
