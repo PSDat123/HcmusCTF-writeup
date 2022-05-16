@@ -9,11 +9,11 @@ Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b
 
 Thu được pt1 trong ring `p-1`: 
 
-s<sub>1</sub> * k<sub>1</sub> = H(msg<sub>1</sub>) - x * r<sub>1</sub>
+s<sub>1</sub> * k<sub>1</sub> = H(msg1) - x * r<sub>1</sub>
 
 pt2 trong ring `p-1`:
   
-s<sub>2</sub> * 3k<sub>1</sub> = H(msg<sub>2</sub>) - x * r<sub>2</sub>
+s<sub>2</sub> * 3k<sub>1</sub> = H(msg2) - x * r<sub>2</sub>
 
 Ta giải hệ pt để tìm được secret key (x) theo cách lập ma trân bằng sage:
 
