@@ -7,24 +7,24 @@ offset = 1
 enc = 'MOTRVZLGEYDQCWBHDHDLYJZDQDESRKSAGGUYMNLYDWOFGTFDGOZMGAQKZMFEGTFESLWBYWRYRMESHFETMMZUJQDVYIJLHFSMNQLJIKCREGTODKGGBUHFESGQOYHFQSUZXBRDYFRDJKOTQOZUMSRMRFDSAUSUYGMZMFBEFAXHDGUNRBMFIDIKETGGTUJMAYEFBMIVQUEYMAZJYHRKIMSEJKDMYKKJQHNCRDKMGUYMKYLOTQORMKOHFJMYLGROFGRFSDTAMNQLQKRDOCHDUESLWBYWRREQQFXKSOZMAZPIBEYIJJKFBANKZTPAQDVZSOTOYUZKNURZFBTGUTOQLYLDQDQMRGUTJKJMGQPHIDNQHODKMKZMMZMBERMJTXLHWUYPJIMVFOOSPUDYLDJJRREEQFXMMSUZMAZHIBEYKJJKFUZVZYEBESRFKFDTLJZVAMQBRRGSKHFJAUDKTMRNMTDTFGJMAZPIBEKMTRVTFMKZMMRMBFDGYPHAYKZLWCFBSCSFQVSWZMZIESYHTDAGMFQ_JVYYRB_QFX_PKKEYKVSQJREHA_HD_JZGBMR_FBFG_HG'
 msg = ''
 
-sbox = []
+sbox_rev = []
 for i in range(0,len(enc),5):
     for j in range(5):
         letter = enc[i+j]
         if letter == "_":
-            sbox.append(letter)
+            sbox_rev.append(letter)
             continue
         temp = ALPHABET.index(letter)
         
         if temp - offset < 0:
             temp += n
             
-        sbox.append(temp-offset)
+        sbox_rev.append(temp-offset)
     offset = (offset*3+4 )%n
     
-print(sbox)
+print(sbox_rev)
 sbox_string = ''
-for i in sbox:
+for i in sbox_rev:
     if i =="_":
         sbox_string+="_"
     else:
