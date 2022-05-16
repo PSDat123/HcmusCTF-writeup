@@ -15,7 +15,7 @@ Nhấn vào đường dẫn của admin Fluoxetine trước thì cho ra hình �
 
 Và ta nghĩ ta đã làm được tuy nhiên ta đã bị admin rolled vì đó không phải là flag cần tìm. Link youtube trong flag đó cũng là video của Rick Astley => rick-rolled lần 2
 
-Tiếp theo ta kiểm tra tin nhắn đính kèm của admin nGth này
+Tiếp theo ta kiểm tra tin nhắn đính kèm của admin nGth này.
 Qua đó chỉ là tin nhắn thông báo chuẩn bị cuộc thi và 1 hình ảnh, ta sẽ xem hình ảnh đó có gì không và từ đó được flag cần tìm:
 ![image](https://user-images.githubusercontent.com/87664370/168631190-c7010277-ec26-480d-a1c2-f4b4c79aab1b.png)
 
