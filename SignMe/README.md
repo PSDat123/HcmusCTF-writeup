@@ -9,10 +9,10 @@ Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b
 
 Thu được pt1 : 
 
-s<sub>1<sub>*k = H(msg<sub>1</sub>) - x*r<sub>1</sub>
+s<sub>1</sub>*k = H(msg<sub>1</sub>) - x*r<sub>1</sub>
 
 pt2:
   
-s<sub>2<sub>*k = H(msg<sub>2</sub>) - x*r<sub>2</sub>
+s<sub>2</sub>*k = H(msg<sub>2</sub>) - x*r<sub>2</sub>
 
 FLAG: `HCMUS-CTF{B4se64_15_1nt3r3stin9}`
