@@ -24,4 +24,4 @@ for i in range(0,len(enc),5):
 ```
 Sau đó sử dụng web để decode `s_box_rev`: https://www.boxentriq.com/code-breaking/cryptogram
 
-FLAG: HCMUS-CTF{NO_SPACES_AND_POLYALPHABETIC_IS_SECURE_ISNT_IT}
+FLAG: `HCMUS-CTF{NO_SPACES_AND_POLYALPHABETIC_IS_SECURE_ISNT_IT}`
