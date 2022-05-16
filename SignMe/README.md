@@ -5,7 +5,7 @@ Tham số k được generate trong Elgamal Signing Scheme ở thử thách này
 <img src="https://render.githubusercontent.com/render/math?math={\color{white}k = \sum_{n=1} ^{\infty} a_i b_i, k%2b=1,   \text{if phi | k }}#gh-dark-mode-only">
 .Trong đó a là só random do server generate và b là user base64 decoded input. 
 
-Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b'03'*32`, từ pt k trên ta thấy k<sub>2</sub>=3*k<sub>1</sub>, đồng thời có được signature của `msg1` và `msg2` nhờ vào signing server. Ngoài ra cần lưu ý k<sub>1</sub> phải coprime với phi, k<sub>2</sub> = odd*k<sub>1</sub> nếu không cách thức này sẽ thất bại (50% số lần chạy sẽ được, 50% sẽ không)
+Từ đây ta có thể exploit bằng cách cho `msg1 = b'01'*32` và `msg2 = b'03'*32`, từ pt k trên ta thấy k<sub>2</sub>=3*k<sub>1</sub>, đồng thời có được signature của `msg1` và `msg2` nhờ vào signing server. Ngoài ra cần lưu ý k<sub>1</sub> phải coprime với phi, k<sub>2</sub> = (số lẻ) * k<sub>1</sub> nếu không cách thức này sẽ thất bại (50% số lần chạy sẽ được, 50% sẽ không)
 
 Thu được pt1 : 
 
