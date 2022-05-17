@@ -6,16 +6,16 @@
 ---
 # WRITE-UP
 1. **CRYPTO**
-    * [Substitution](Substitution/README.md)
-    * [Substitution 2](Substitution%202/README.md)
-    * [OH SEED](OH%20SEED/README.md)
-    * [SignMe](SignMe/README.md)
+    * [Substitution](Substitution/)
+    * [Substitution 2](Substitution%202/)
+    * [OH SEED](OH%20SEED/)
+    * [SignMe](SignMe/)
 2. **WEB**
-    * [No Backend](No%20Backend/README.md)
-    * [ShopCuteV3](ShopCuteV3/README.md)
+    * [No Backend](No%20Backend/)
+    * [ShopCuteV3](ShopCuteV3/)
 3. **PWN** 
-    * [WWW](www/README.md)
+    * [WWW](www/)
 4. **REV**
-    * [Babydroid](babyroid/README.md)
+    * [Babydroid](babyroid/)
 5. **MISC**
-    * [Super Secret](Super%20Secret/README.md)
+    * [Super Secret](Super%20Secret/)
