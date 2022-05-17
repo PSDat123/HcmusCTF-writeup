@@ -7,6 +7,7 @@ Thông thường các flag được giấu trong các tin nhắn đã được g
 Thì ta tìm thấy được 2 kết quả:
 
 Đó là 1 đường dẫn của admin Fluoxetine trong phần thông tin của tôi và 1 tin nhắn đính kèm của admin nGth trong phần khung chat của General:
+
 ![image](https://user-images.githubusercontent.com/87664370/168628950-ff25951b-34c9-4a34-b4c7-be482aa008c7.png)
 ![image](https://user-images.githubusercontent.com/87664370/168629035-fb979bb8-1bd3-44de-b76f-1588438a109f.png)
 
